@@ -10,12 +10,23 @@ Create an array of strings called `colors` that contain "orange", "red", "yellow
 
 Then, using array subscripting and string interpolation, print out the String `"orange, yellow, and lavender are some of my favorite colors"`.
 
+let colors = ["orange", "red", "yellow", "turquoise", "lavender"]
+let or = colors[0]
+let ye = colors[2]
+let la = colors[4]
+
+print("\(or), \(ye), and \(la) are some of my favorite colors!")
 
 ## Question 2
 
 Remove "Illinois" and "Kansas" from the array below.
 
 `var westernStates = ["California", "Oregon", "Washington", "Idaho", "Illinois", "Kansas"]`
+
+let byeKa = westernStates.remove(at: 5)
+let byeIl = westernStates.remove(at: 4)
+
+print(westernStates)
 
 
 ## Question 3
@@ -24,6 +35,13 @@ Iterate through the array below. For each state, print out the name of the state
 
 `let moreStates = ["Hawaii", "New Mexico", "Alaska", "Montana", "Texas", "New York", "Florida"]`
 
+for index in 0..<moreStates.count {
+    if moreStates[index] == moreStates[0] {
+        print("\(moreStates[index]): is not in the continental United States")
+    } else {
+        print("\(moreStates[index]): is in the continental United States")
+    }
+}
 
 ## Question 4
 
